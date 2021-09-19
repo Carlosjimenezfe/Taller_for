@@ -38,4 +38,72 @@ def numero_auto(cantidad_autos):
     print(f'Los carros ingresados con calcomanía azul: {color_azul}')
 numero_auto(12)
 
+"""
+Un Zoólogo pretende determinar el porcentaje de animales que hay en las
+siguiente categorias de edades: 0 a 1 año, de mas de 1 año y menos de 3 y
+de 3 o mas años. El zoológico todavía no está seguro del animal que va
+estudiar. Si se decide por elefantes solo tomará una muestra de 20 de ellos;
+si se decide por jirafas, tomara 15 de muestras y si son chompancés tomará
+40.  
+"""
+def porcentaje_animales(elefantes, jirafas, chimpances):
+    animal = input('Digite la raza del animal que se va a estudiar: ')
+    categoria_uno = 0
+    categoria_dos = 0
+    categoria_tres = 0
+    if(animal == 'elefante'): 
+        for valor in range(elefantes):
+            edad = int(input(f'Digite la edad {valor + 1}: '))
+            if(edad >= 0 and edad <= 1):
+                categoria_uno = categoria_uno + 1
+                porcentaje_uno = (categoria_uno * 100) / 20
+            elif(edad > 1 and edad < 3):
+                categoria_dos =  categoria_dos + 1
+                porcentaje_dos = (categoria_dos * 100) / 20
+            elif(edad >= 3):
+                categoria_tres = categoria_tres + 1
+                porcentaje_tres = (categoria_tres * 100) / 20
+            else:
+                print('La edad ingresada no se encuntra entre el rango de edad permitida')
+        print(f'El porcentaje de elefantes entre el rango de edad de 0 y 1 años es: {porcentaje_uno}% ')
+        print(f'El porcentaje de elefantes entre el rango de edad 1 y 3 años es: {porcentaje_dos}% ')
+        print(f'El porcentaje de elefantes entre el rango de edad de 3 ó más años es: {porcentaje_tres}% ')
+    if(animal == 'jirafa'):
+        for valor in range(jirafas):
+            edad = int(input(f'Digite la edad {valor + 1}: '))
+            if(edad >= 0 and edad <= 1):
+                categoria_uno = categoria_uno + 1
+                porcentaje_uno = (categoria_uno * 100) / 15
+            elif(edad > 1 and edad < 3):
+                categoria_dos = categoria_dos + 1
+                porcentaje_dos = (categoria_dos * 100) / 15
+            elif(edad >= 3):
+                categoria_tres = categoria_tres + 1
+                porcentaje_tres = (categoria_tres * 100) / 15
+            else:
+                print('La edad ingresada no se encuentra entre el rango de edad permitida')
+        print(f'El porcentaje de jirafas entre el rengo de edad de 0 y 1 años es: {porcentaje_uno}% ')
+        print(f'El porcentaje de jirafas entre el rango de edad de 1 y 3 años es: {porcentaje_dos}% ') 
+        print(f'El porcentaje de jirafas entre el rango de edad  de 3 ó más años es: {porcentaje_tres}% ')
+    if(animal == 'chimpance'):
+        for valor in range(chimpances):
+            edad = int(input(f'Digite la edad {valor + 1}: '))
+            if(edad >= 0 and edad <= 1):
+                categoria_uno = categoria_uno + 1
+                porcentaje_uno = (categoria_uno * 100) / 40
+            elif(edad > 1 and edad < 3):
+                categoria_dos = categoria_dos + 1
+                porcentaje_dos = (categoria_dos * 100) / 40
+            elif(edad >= 3):
+                categoria_tres = categoria_tres + 1
+                porcentaje_tres = (categoria_tres * 100) / 40
+            
+            else:
+                print('La edad ingresada no se encuentra entre el rango de edad permitida')
+        print(f'El porcentaje de chimpancés entre el rango de edad de 0 y 1 años es: {porcentaje_uno}% ')
+        print(f'El porcentaje de chimpancés entre el rango de edad de 1 y 3 años es: {porcentaje_dos}% ')
+        print(f'El porcentaje de chimpancés entre el rango de edad de 3 ó más años es: {porcentaje_tres}% ')
+porcentaje_animales(20, 15, 40) 
     
+
+
