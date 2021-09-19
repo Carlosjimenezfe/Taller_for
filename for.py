@@ -104,6 +104,37 @@ def porcentaje_animales(elefantes, jirafas, chimpances):
         print(f'El porcentaje de chimpancés entre el rango de edad de 1 y 3 años es: {porcentaje_dos}% ')
         print(f'El porcentaje de chimpancés entre el rango de edad de 3 ó más años es: {porcentaje_tres}% ')
 porcentaje_animales(20, 15, 40) 
-    
 
+"""    
+Una empresa se requiere calcular el salario semanal de cada uno de los n
+obreros que laboran en ella. El salario se obtiene de la siguiente forma:
+a. Si el obrero trabaja 40 horas o menos se le paga $20 por hora
+b. Si trabaja mas de 40 horas se le paga $20 por cada una de
+lasprimeras 40 horas y $25 por cada hora extra.
+"""
+
+def salario_trabajador(numero_trabajadores):
+    if(numero_trabajadores > 0):
+        for valor in range(numero_trabajadores):
+            numero_horas = int(input(f'Digite las horas trabajadas del obrero {valor + 1}: '))
+            if(numero_horas <= 40):
+                total_pagar = numero_horas * 20
+                print(f'El salario del obrero es: {total_pagar}')
+            elif(numero_horas > 40):
+                salario = numero_horas - 40
+                total_salario = ((salario * 25) + (20 * 40))
+                print(f'El salario total del obrero es de : ${total_salario}')
+    else:
+        print('El número de obreros digitado esta equivocado')
+salario_trabajador(5) 
+              
+
+
+                
+    
+         
+        
+        
+        
+   
 
