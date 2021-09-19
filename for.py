@@ -131,7 +131,8 @@ salario_trabajador(5)
 """   
 Calcular el promedio de edades de hombres, mujeres y de todo un grupo
 de alumnos
- """   
+"""   
+
 def total_grupo(total_grupo, hombres, mujeres):
     promedio_grupo = 0
     promedio_hombres = 0
@@ -154,11 +155,20 @@ def total_grupo(total_grupo, hombres, mujeres):
     print(f'El promedio de edad de los alumnos es de : {total_alumnos}')
     print(f'El promedio de edad de las alumnas es de : {total_alumnas}')
 total_grupo(6, 3, 7)
-            
 
+"""               
+Encontrar el menor valor de un conjunto de n números dados
+"""   
 
-                
-    
+def menor_valor(numeros):
+    import math
+    numero_menor = math.inf
+    for valor in range(numeros):
+        digitar_numero = float(input(f'Digite el número {valor+1}: '))
+        if(digitar_numero < numero_menor):
+            numero_menor = digitar_numero
+    print(f'El número menor es: {numero_menor}')
+menor_valor(5)
          
         
         
