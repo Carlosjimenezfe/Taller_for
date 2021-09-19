@@ -127,7 +127,34 @@ def salario_trabajador(numero_trabajadores):
     else:
         print('El número de obreros digitado esta equivocado')
 salario_trabajador(5) 
-              
+
+"""   
+Calcular el promedio de edades de hombres, mujeres y de todo un grupo
+de alumnos
+ """   
+def total_grupo(total_grupo, hombres, mujeres):
+    promedio_grupo = 0
+    promedio_hombres = 0
+    promedio_mujeres = 0
+    for valor in range(total_grupo):
+        edad_alumno = int(input(f'Digite la edad del alumno {valor + 1}: '))
+        sexo_alumno = input(f'Digite si es hombre o mujer el alumno {valor + 1}: ')
+        if(sexo_alumno == 'hombre' or sexo_alumno == 'mujer'):
+            promedio_grupo = promedio_grupo + edad_alumno           
+            total = promedio_grupo / total_grupo            
+            if(sexo_alumno == 'hombre'):
+                promedio_hombres = promedio_hombres + edad_alumno                
+                total_alumnos = promedio_hombres / hombres               
+            elif(sexo_alumno == 'mujer'):
+                promedio_mujeres = promedio_mujeres + edad_alumno               
+                total_alumnas = promedio_mujeres / mujeres
+                
+        
+    print(f'El promedio de edad de todo el grupo es: {total}')
+    print(f'El promedio de edad de los alumnos es de : {total_alumnos}')
+    print(f'El promedio de edad de las alumnas es de : {total_alumnas}')
+total_grupo(6, 3, 7)
+            
 
 
                 
