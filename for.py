@@ -192,9 +192,26 @@ def peso_miembros(miembros):
         else:
             print(f'La persona bajo de peso', resta, 'Kg')
 peso_miembros(4) 
-            
-        
-        
-        
-   
 
+"""              
+En un supermercado una ama de casa pone en su carrito los artículos que
+va tomando de los estantes. La señora quiere asegurarse de que el cajero
+le cobre bien lo que ella ha comprado, por lo que cada vez que toma un
+artóculo anota su precio junto con la cantidad de artículos iguales que ha
+tomado y determina cuanto dinero gastará en ese artículo; a esto le suma lo
+que irá gastando en los demás artículos, hasta que decide que ya tomó
+todo lo que necesitaba. Ayúdele a esta señora a obtener el total de su
+compra.      
+"""  
+def carrito_articulos(numero_productos):
+    total_compra = 0
+    for x in range(numero_productos):
+        precio_producto = int(input(f'Digite el valor del precio del producto {x+1}: '))
+        if(precio_producto > 1):
+            cantidad_producto = int(input('Digite que cantidad del producto que desea llevar: '))
+            pago = precio_producto * cantidad_producto
+            total_compra = total_compra + pago
+        else:
+            precio_producto = 0
+    print(f'El valor total de la compra es de: ${total_compra}')
+carrito_articulos(5) 
