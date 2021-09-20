@@ -215,3 +215,46 @@ def carrito_articulos(numero_productos):
             precio_producto = 0
     print(f'El valor total de la compra es de: ${total_compra}')
 carrito_articulos(5) 
+
+"""     
+Un teatro otorga descuentos según la edad del cliente, determinar la
+cantidad del dinero que el teatro deja de percibir por cada ua de las
+categorias. Tomar en cuenta que los niños menores de 5 años no pueden
+entrar al teatro y que existe un precio único en los asientos. Los descuentos
+se hacen tomando en cuenta el siguiente cuadro:
+"""     
+def personas(numero_de_personas):
+    precio_boleta = int(input("Digite el precio de la boleta "))   
+    limite_edad_uno = 0
+    limte_edad_dos = 0
+    limite_edad_tres = 0
+    limite_edad_cuatro = 0
+    limite_edad_cinco = 0
+    for valor in range(numero_de_personas):
+        edad = int(input(f'Digite la edad de la persona {valor + 1}: '))
+        if edad < 5:
+            print("Los niños menores de 5 años no pueden entrar")
+        if edad > 5 and edad <= 14:
+            limite_edad_uno += 1
+        if edad > 15 and edad <= 19:
+            limte_edad_dos += 1
+        if edad > 20 and edad <= 45:
+            limite_edad_tres += 1
+        if edad > 46 and edad <= 65:
+            limite_edad_cuatro += 1
+        if edad > 66:
+            limite_edad_cinco += 1
+    print('la cantidad del dinero que el teatro deja de percibir en la categoría 5-14 es: ',
+         limite_edad_uno * precio_boleta * 0.35)
+    print('la cantidad del dinero que el teatro deja de percibir en la categoría 15-20 es: ',
+          limte_edad_dos * precio_boleta * 0.25)
+    print('la cantidad del dinero que el teatro deja de percibir en la categoría 20-45 es: ',
+          limite_edad_tres * precio_boleta * 0.10)
+    print('la cantidad del dinero que el teatro deja de percibir en la categoría 46-65 es: ',
+          limite_edad_cuatro * precio_boleta * 0.25)
+    print('la cantidad del dinero que el teatro deja de percibir en la categoría 66-adelante es: ',
+          limite_edad_cinco * precio_boleta * 0.35)
+personas(3)
+
+
+
