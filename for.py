@@ -169,7 +169,30 @@ def menor_valor(numeros):
             numero_menor = digitar_numero
     print(f'El número menor es: {numero_menor}')
 menor_valor(5)
-         
+
+"""  
+Cinco miembros de un club contra la obesidad desean saber cuanto han
+bajado o subido de peso desde la última vez que se reunieron. Para esto se
+debe realizar un ritual de pesaje en donde cada uno se pesa en diez
+básculas distintas para así tener el pormedio mas exacto de su peso. Si 
+"""  
+def peso_miembros(miembros):
+   for valor in range (0,5):  
+        peso_acumulado = 0
+        peso_promedio  = 0
+        resta = 0
+        peso_ultimo = float (input(f'Digitar el ultimo peso del paciente {valor + 1} : '))
+        for valor_dos in range (0,10): 
+         peso = float (input(f'Digitar el ultimo peso de la básculas {valor_dos + 1} : '))
+        peso_acumulado = peso_acumulado + peso
+        peso_promedio = peso_acumulado / 10
+        resta = peso_promedio - peso_ultimo
+        if(resta > 0):
+            print(f'La persona subio de peso', resta, 'Kg')
+        else:
+            print(f'La persona bajo de peso', resta, 'Kg')
+peso_miembros(4) 
+            
         
         
         
