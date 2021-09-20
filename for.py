@@ -256,5 +256,26 @@ def personas(numero_de_personas):
           limite_edad_cinco * precio_boleta * 0.35)
 personas(3)
 
-
-
+"""   
+Kia Autos premia anualmente a sus mejores vendedores de acuerdo a la
+siguiente tabla:
+ """   
+def vendedores(numero_vendedores):
+    for valor in range(numero_vendedores):
+        venta = int(input(f'Digite cuanto vendío el empleado {valor + 1}: '))
+        if(venta < 20):
+            comision_uno = venta * 0.1
+            print(f"La comisión del empleado es de {comision_uno}")
+        if(venta < 40 and venta > 20):
+            comision_dos = venta * 0.15
+            print(f"La comisión del empleado es de {comision_dos} ")
+        if(venta < 80 and venta >= 40):
+            comision_tres = venta * 0.20
+            print(f"La comisión del empleado es de {comision_tres}")
+        if(venta < 160 and venta >= 80):
+            comision_cuatro = venta * 0.25
+            print(f"La comisión del empleado es de {comision_cuatro} ")
+        if(venta > 160):
+            comision_cinco = venta * 0.30
+            print(f"La comisión del empleado es de {comision_cinco}")
+vendedores(100) 
