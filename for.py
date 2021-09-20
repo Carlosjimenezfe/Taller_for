@@ -279,3 +279,33 @@ def vendedores(numero_vendedores):
             comision_cinco = venta * 0.30
             print(f"La comisión del empleado es de {comision_cinco}")
 vendedores(100) 
+
+""" 
+La empresa Encuestas S.A desea crear una función que les permita
+conocer de los 50.000 votos obtenidos por 3 candidatos, cual de estos fue
+el ganador o indicar si hubo empate y la cantidad de votos obtenidos.
+""" 
+def empresa_encuesta(personas):
+    candidato_uno = 0
+    candidato_dos = 0
+    candidato_tres = 0
+    ganador = 0
+    for valor in range(personas):
+        voto = int(input(f'Votante {valor + 1}, digite el numero del candidato a votar: '))
+        if (voto == 1):
+            candidato_uno += 1
+        if (voto == 2):
+            candidato_dos += 1
+        if (voto == 3):
+            candidato_tres += 1
+    if (candidato_uno > candidato_dos and candidato_uno > candidato_tres):
+        ganador = 1
+    if (candidato_dos > candidato_uno and candidato_dos > candidato_tres):
+        ganador = 2
+    if (candidato_tres > candidato_uno and candidato_tres > candidato_dos):
+        ganador = 3
+    print(f'Votos del primer candidato: {candidato_uno}')
+    print(f'Votos del segundo candidato: {candidato_dos}')
+    print(f'Votos del tercer candidato: {candidato_tres}')
+    print(f'El ganador es: {ganador}')
+empresa_encuesta(50000)
